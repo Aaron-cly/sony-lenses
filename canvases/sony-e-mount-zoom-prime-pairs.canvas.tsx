@@ -2,6 +2,9 @@ import { Button, Card, CardBody, CardHeader, Grid, H1, H2, Pill, Row, Stack, Sta
 
 const a7crWeight = 515;
 
+const prime16IQ = "16G: sharp center wide-open, decent corners by f/2.8-4, low coma — solid astro prime.";
+const prime50IQ = "50G: sharp across the frame at f/2.5, clean rendering, minor LoCA — clean daily prime.";
+
 const pairs = [
   {
     zoom: "Tamron 20-40mm f/2.8",
@@ -11,6 +14,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Best lightweight mountain + astro pairing. 16mm handles your Samyang-style UWA/astro work; Tamron covers hiking scenes from wide to normal.",
+    iqNotes: `Zoom: excellent center; uniquely uniform 20mm corners at f/2.8; 40mm corners need f/5.6; low CA; mild magenta/cyan in backlit edges. ${prime16IQ}`,
     tier: "Best fit",
   },
   {
@@ -21,6 +25,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Best convenience kit. 20-70 is the daytime do-everything lens; 16mm covers serious astro and dramatic UWA.",
+    iqNotes: `Zoom: very sharp center across range, corners clean by f/5.6, low distortion for the range, well-controlled CA. ${prime16IQ}`,
     tier: "Most versatile",
   },
   {
@@ -31,6 +36,7 @@ const pairs = [
     primeWeight: 174,
     primePrice: 4590,
     usage: "Strong compact UWA zoom kit. Samyang covers wide landscape and occasional astro; 50mm adds your classic normal-lens daily/detail role.",
+    iqNotes: `Zoom: sharp center, respectable corners by f/4; moderate edge astigmatism/coma — astro-usable but not coma-free; heavy profile distortion. ${prime50IQ}`,
     tier: "UWA zoom",
   },
   {
@@ -41,6 +47,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Wide-to-normal hiking zoom plus true astro prime. Practical range, but more overlap with 16mm than the Tamron 20-40 pairing.",
+    iqNotes: `Zoom: sharp center across range; 17mm corners soft at f/4, clean by f/5.6-8; low CA; moderate but correctable distortion. ${prime16IQ}`,
     tier: "Practical",
   },
   {
@@ -51,6 +58,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Compact all-Sony f/2.8 kit. Good if you want native 50mm and Sony controls, but 16-24mm gap matters for landscapes.",
+    iqNotes: `Zoom: excellent center wide-open; 24mm corners soft (mandatory distortion correction stretches edges); strong lateral CA; LoCA at 50mm; ~1 stop vignetting at 50mm f/2.8; great flare resistance. ${prime16IQ}`,
     tier: "Good",
   },
   {
@@ -61,6 +69,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Better for travel, people, food, and details than pure hiking. The 16-28mm gap is the main landscape compromise.",
+    iqNotes: `Zoom: sharp center, decent corners by f/4; low distortion and CA for a compact f/2.8 standard zoom; pleasant bokeh. ${prime16IQ}`,
     tier: "Travel",
   },
   {
@@ -71,6 +80,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "All-in-one daylight travel zoom plus dedicated UWA/astro prime. Very capable, but heavier than your wide-focused hiking kits.",
+    iqNotes: `Zoom: very sharp center at 25-70mm, softer corners 100-200mm; expected superzoom CA at extremes; heavy reliance on profile correction. ${prime16IQ}`,
     tier: "All-in-one",
   },
   {
@@ -81,6 +91,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Most interesting superzoom range for landscapes because it starts at 20mm. Price is pending HK confirmation, and astro still belongs to the 16mm prime.",
+    iqNotes: `Zoom: early reports show acceptable center across range, softer corners and CA at extremes; requires profile correction; weakest at 200mm. ${prime16IQ}`,
     tier: "All-in-one",
   },
   {
@@ -91,6 +102,7 @@ const pairs = [
     primeWeight: 174,
     primePrice: 4590,
     usage: "Lightest serious two-lens Sony kit here. Great landscape + daily split; astro is usable at 16mm f/2.8, not as strong as f/1.8.",
+    iqNotes: `Zoom: very sharp center wide-open including 16mm corners; low distortion for the class; minor CA — strongest compact UWA-zoom IQ. ${prime50IQ}`,
     tier: "Light Sony",
   },
   {
@@ -101,6 +113,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Very light wide zoom plus real astro prime. Strong if you want all-Sony and low weight, but less normal/tele reach.",
+    iqNotes: `Zoom: good sharpness across range, corners cleaner stopped down; heavy in-camera distortion correction; mild CA. ${prime16IQ}`,
     tier: "Wide-light",
   },
   {
@@ -111,6 +124,7 @@ const pairs = [
     primeWeight: 174,
     primePrice: 4590,
     usage: "Premium mountain wide zoom plus tiny daily 50. Excellent IQ, but costly and heavier than your stated priority suggests.",
+    iqNotes: `Zoom: GM-class — excellent edge-to-edge sharpness wide-open, low coma (top astro zoom IQ), very low CA, smooth rendering. ${prime50IQ}`,
     tier: "Premium",
   },
   {
@@ -121,6 +135,7 @@ const pairs = [
     primeWeight: 174,
     primePrice: 4590,
     usage: "Budget wide f/2.8 plus daily 50. Similar concept to 16-25G + 50, but less Sony-native and less refined.",
+    iqNotes: `Zoom: very sharp center; corners catch up by f/5.6; low distortion; clean CA — strong value IQ but less even than Sony 16-25G. ${prime50IQ}`,
     tier: "Budget wide",
   },
   {
@@ -131,6 +146,7 @@ const pairs = [
     primeWeight: 174,
     primePrice: 4590,
     usage: "Modern wide f/2.8 plus compact 50. Good range, but less compelling if you specifically want the 16mm f/1.8 for astro.",
+    iqNotes: `Zoom: improved over predecessor; sharp across frame at f/2.8; acceptable but not coma-free for casual astro; low CA. ${prime50IQ}`,
     tier: "Wide",
   },
   {
@@ -141,6 +157,7 @@ const pairs = [
     primeWeight: 174,
     primePrice: 4590,
     usage: "Wide landscape zoom plus classic 50. Reasonable, but not as light as Sony 16-25G and not as astro-capable as 16mm f/1.8.",
+    iqNotes: `Zoom: sharp center, decent corners by f/4; low CA; compact, clean rendering — competent but not standout. ${prime50IQ}`,
     tier: "Wide",
   },
   {
@@ -151,6 +168,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Travel/people-oriented standard zoom plus astro prime. More reach than you likely need on mountain trails.",
+    iqNotes: `Zoom: excellent sharpness wide-open across the frame; low CA; pleasing rendering — strong standard-zoom IQ for its price. ${prime16IQ}`,
     tier: "Travel",
   },
   {
@@ -161,6 +179,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Big range plus astro prime. Good value, but the total carry weight is not ideal for your hiking-first use.",
+    iqNotes: `Zoom: very good sharpness across range; mild distortion; classic G workhorse rendering; OSS adds handheld margin. ${prime16IQ}`,
     tier: "Heavy",
   },
   {
@@ -171,6 +190,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "High-IQ standard f/2.8 plus astro prime. Too heavy for the lightweight trail kit you described.",
+    iqNotes: `Zoom: near GM-class — excellent sharpness wide-open across frame, very low CA, clean bokeh. ${prime16IQ}`,
     tier: "Heavy",
   },
   {
@@ -181,6 +201,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Excellent pro travel/event kit plus astro prime. Very expensive and not optimized for your UWA landscape bias.",
+    iqNotes: `Zoom: reference-class IQ — sharp edge-to-edge at f/2.8, excellent CA/distortion control, smooth bokeh, top flare resistance. ${prime16IQ}`,
     tier: "Heavy",
   },
   {
@@ -191,6 +212,7 @@ const pairs = [
     primeWeight: 304,
     primePrice: 6490,
     usage: "Ultra-light budget zoom plus proper UWA/astro prime. Weight is excellent, but the zoom is the weak IQ/experience link.",
+    iqNotes: `Zoom: decent center, soft corners, heavy in-camera distortion correction, modest contrast — weakest IQ in this list. ${prime16IQ}`,
     tier: "Tiny",
   },
 ];
@@ -243,6 +265,7 @@ export default function SonyZoomPrimePairs() {
       `${totalWeight}g`,
       item.zoomPrice === 0 ? `HK$${item.primePrice.toLocaleString("en-US")} + zoom TBD` : `HK$${totalPrice.toLocaleString("en-US")}`,
       item.usage,
+      item.iqNotes,
       item.tier,
     ];
   });
@@ -291,10 +314,10 @@ export default function SonyZoomPrimePairs() {
       <Stack gap={8}>
         <H2>Calculated Pairings</H2>
         <Table
-          headers={["Move", "Zoom", "Paired prime", "Lens weight", "With A7CR", "Total price", "Usage", "Tier"]}
+          headers={["Move", "Zoom", "Paired prime", "Lens weight", "With A7CR", "Total price", "Usage", "IQ notes", "Tier"]}
           rows={rows}
           rowTone={rowTone}
-          columnAlign={["left", "left", "left", "right", "right", "right", "left", "center"]}
+          columnAlign={["left", "left", "left", "right", "right", "right", "left", "left", "center"]}
           striped
           stickyHeader
         />
